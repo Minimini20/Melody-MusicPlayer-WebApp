@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melody</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="./perfect-scrollbar-1.4.0/css/perfect-scrollbar.css"> -->
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="p5/p5.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="upper">
+            <div class="dashboard">
+                <div class="brand-nav">
+                    <div class="brand-icon">
+                        <span class="material-icons music-note">music_note</span>
+                    </div>
+                    <div class="brand-name">Melody</div>
+                </div>
+                <div class="options-modal">
+                    <div class="home option selected">
+                        <div class="material-icons home-icon">home</div>
+                       <div class="dashboard-menu">Home</div>
+                    </div>
+                    <div class="library option">
+                        <div class="material-icons library-icon">horizontal_split</div>
+                        <div class="dashboard-menu">Library</div>
+                    </div>
+                    <div class="fav option">
+                        <div class="material-icons fav-icon">favorite</div>
+                        <div class="dashboard-menu">Favorites</div>
+                    </div>
+                    <div class="sketch-container"></div>
+                    <div class="create">
+                        <div class="material-icons playlist-icon">playlist_add</div>
+                        <div class="dashboard-menu">Create playlist</div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-side">
+                <div class="navbar">
+                    <div class="music-icon">
+                        <span class="material-icons">library_music</span>
+                    </div>
+                    <div class="search-container">
+                        <div class="search-bar">
+                            <div class="material-icons search-icon">search</div>
+                            <input type="text" id="search" />
+                        </div>
+                    </div>
+                    <div class="profile-container">
+                        <div class="profile">
+                            <img src="/covers/music.jpg" class="profile_picture">
+                        </div>
+                    </div>
+                </div>
+                    <div class="main-page">
+                        <div class="content-area"></div>
+                    </div>
+            </div>
+        </div> 
+        <div class="sticky-container">
+            <div class="footer">
+              
+                <div class="audio-player">
+                    <div class="timeline">
+                        <input type = "range" min="1" max="100" value="0" class="seek_slider" onchange ="seekTo()" />
+                    </div>
+                    <div class="controls">
+                        <div class="play-container">
+                            <div class="toggle-play play material-icons">play_arrow</div>
+                        </div>
+                        <div class="bg-black">
+                            <div class="time">
+                                <div class="curr_time">0:00</div>
+                                <div class="divider">/</div>
+                                <div class="total-duration">0:00</div>
+                            </div>
+                            <div class="track-name">Melody</div>
+                        </div>
+                        <div class="volume-container">
+                            <div class="volume-button">
+                            <div class="volume material-icons">volume_up</div>
+                            </div>
+                            <input type="range" min="1" max="100" value="90" class="volume_slider" onchange="setVolume()">        
+                        </div>
+                    </div>
+                 </div>
+                  </div>
+            </div>     
+            <div class="drop-down">
+                <div class="material-icons collapse">expand_less</div>
+            </div>      
+     </div>
+    <script src="script.js"></script>
+    <script src="sketch.js"></script>
+</body>
+</html>
